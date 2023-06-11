@@ -10,9 +10,70 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: palegoldenrod;
+    background: peachpuff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+}
+.container {
+    padding: 2rem 3rem;
+    border-radius: 14px;
+    background: papayawhip;
+}
+.resultImages{
+    display: flex;
 }
 .resultImages img{
     width: 100px;
+    column-gap: 7rem;
 
+}
+
+.userResult img{
+    transform: rotate(90deg) rotateY(180deg);
+}
+.cpuResult img{
+    transform: rotate(-90deg);
+}
+
+.result{
+    text-align: center;
+    font-size: 2rem;
+    color: peru;
+    margin-top: 1.5rem;
+}
+
+.optionImgs img{
+    width: 50px;
+}
+
+.optionImgs {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+}
+.optionImgs:hover{
+    opacity: 1;
+}
+
+.optionImgs img{
+    pointer-events: none;
+}
+
+
+.optionImgs{ 
+    display: flex;
+    /* flex-direction: column;  */
+    align-items: center;
+}
+
+.iconImgs p{
+    color:peru;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+    display: inline-block;
 }
