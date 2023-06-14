@@ -11,19 +11,43 @@ body{
     align-items: center;
     justify-content: center;
     background: peachpuff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+}
+::selection{
+    color: aliceblue;
+    background-color: blanchedalmond;
 }
 .container {
     padding: 2rem 3rem;
     border-radius: 14px;
     background: papayawhip;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
 }
-.resultImages{
+.displayImage{
     display: flex;
-}
-.resultImages img{
-    width: 100px;
     column-gap: 7rem;
+}
+.comtaimer.start.userResult(
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+)
+@keyfreames userShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+.comtaimer.start.cpuResult(
+    transform-origin: right;
+    animation: userShake 0.7s ease infinite;
+)
+@keyfreames userShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.displayImage img{
+    width: 100px;
+    /* column-gap: 7rem; */
 
 }
 
@@ -41,39 +65,49 @@ body{
     margin-top: 1.5rem;
 }
 
-.optionImgs img{
+.iconImage img{
     width: 50px;
 }
 
-.optionImgs {
+.optionImages {
     display: flex;
     align-items: center;
     margin-top: 2.5rem;
     justify-content: space-between;
+    /* opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease; */
+
+}
+.comtainer.start .optionImages{
+    pointer-events: none;
+}
+
+.iconImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     opacity: 0.5;
     cursor: pointer;
     transition: opacity 0.3s ease;
-
 }
-.optionImgs:hover{
+
+.iconImage:hover{
+    opacity: 1;
+}
+.iconImage.active{
     opacity: 1;
 }
 
-.optionImgs img{
+.iconImage img{
     pointer-events: none;
 }
 
 
-.optionImgs{ 
-    display: flex;
-    /* flex-direction: column;  */
-    align-items: center;
-}
-
-.iconImgs p{
+.iconImage p{
     color:peru;
     font-size: 1.235rem;
     margin-top: 1rem;
     pointer-events: none;
-    display: inline-block;
+    /* display: inline-block; */
 }
