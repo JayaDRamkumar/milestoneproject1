@@ -9,15 +9,15 @@
     iconImage.forEach((image, index) => {
         image.addEventListener("click", (e) => {
           image.classList.add("active");
-    //         userResult.src = cpuResult.src = "images/rock.jpg";
-    //         result.textContent = "Say...Shooot";
+            userResult.src = cpuResult.src = "images/rock.jpg";
+            result.textContent = "Say...Shooot";
             iconImage.forEach((image2, index2) => {
                 // console.log(index,index2)
                 index !== index2 && image2.classList.remove("active");
             });
-    //         gameContainer.classList.add("start");
-    //         let time = setTimeout (()=> {
-    //             gameContainer.classList.remove("start");
+            gameContainer.classList.add("start");
+            let time = setTimeout (()=> {
+                gameContainer.classList.remove("start");
                 let imageSrc = e.target.querySelector("img").src;
                
                 userResult.src = imageSrc;
@@ -45,7 +45,6 @@
                   let outComeValue = outcomes[userValue + cpuValue];
                   console.log(outComeValue);
                   result.textContent = userValue === cpuValue ? "Match Draw" : `${outComeValue} Wins!!`;
-    //             }, 2500);
-            
+                }, 2500); 
         });
     });
