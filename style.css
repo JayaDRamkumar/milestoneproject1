@@ -27,18 +27,8 @@ body{
     column-gap: 7rem;
 }
 .container.start .userResult{
-    /* transform-origin: left; */
     animation: userShake 0.7s ease infinite;
 }
-
-/* .iconImage:active {
-    animation: shake 1s;
-}
-@keyframes shake {
-    50% {
-        transform: translate(-1px, 2px) rotate(-30deg);
-    }
-} */
 
 .iconImage:active {
     animation: userShake 2s;
@@ -78,9 +68,6 @@ body{
     align-items: center;
     margin-top: 2.5rem;
     justify-content: space-between;
-    /* opacity: 0.5;
-    cursor: pointer;
-    transition: opacity 0.3s ease; */
 
 }
 .container.start .optionImages{
@@ -113,5 +100,4 @@ body{
     font-size: 1.235rem;
     margin-top: 1rem;
     pointer-events: none;
-    /* display: inline-block; */
 }

@@ -4,15 +4,12 @@
     result = document.querySelector(".result")
     iconImage = document.querySelectorAll(".iconImage");
 
-    // console.log(gameContainer,userResult,cpuResult,result,iconImage)
-
     iconImage.forEach((image, index) => {
         image.addEventListener("click", (e) => {
           image.classList.add("active");
             userResult.src = cpuResult.src = "images/rock.jpg";
             result.textContent = "Say...Shooot";
             iconImage.forEach((image2, index2) => {
-                // console.log(index,index2)
                 index !== index2 && image2.classList.remove("active");
             });
             gameContainer.classList.add("start");
@@ -22,15 +19,13 @@
                
                 userResult.src = imageSrc;
 
-                //  console.log(imageSrc)
                 let randomNumber = Math.floor(Math.random() * 3);
 
-                // console.log(randomNumber)
+                
                 let cpuImages = ["/./assests/rock.jpg", "./assests/paper.jpg", "./assests/scissor.jpg"];
                 cpuResult.src = cpuImages[randomNumber];
                 let cpuValue = ["R", "P", "S"][randomNumber];
                 let userValue = ["R", "P", "S"][index];
-                // console.log(cpuValue,userValue)
                 let outcomes = { 
                     RR: "Draw",
                     RP: "Cpu",
