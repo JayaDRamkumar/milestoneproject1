@@ -20,7 +20,7 @@ body{
     padding: 2rem 3rem;
     border-radius: 14px;
     background: papayawhip;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .displayImage{
     display: flex;
@@ -32,10 +32,10 @@ body{
 )
 @keyfreames userShake {
     50% {
-        transform: rotate(10deg);
+        transform: translateY(10px);
     }
 }
-.comtaimer.start.cpuResult(
+/* .comtaimer.start.cpuResult(
     transform-origin: right;
     animation: userShake 0.7s ease infinite;
 )
@@ -43,7 +43,7 @@ body{
     50% {
         transform: rotate(10deg);
     }
-}
+} */
 
 .displayImage img{
     width: 100px;
@@ -79,7 +79,7 @@ body{
     transition: opacity 0.3s ease; */
 
 }
-.comtainer.start .optionImages{
+.container.start .optionImages{
     pointer-events: none;
 }
 
